@@ -1,0 +1,84 @@
+###
+DELETE http://localhost:3000/cliente/delete/5
+
+###
+GET http://localhost:3000/cliente
+
+###
+GET http://localhost:3000/cliente/find/1
+
+###
+GET http://localhost:3000/cliente/cpf/39835111132
+
+###
+POST http://localhost:3000/cliente
+Content-Type: application/json
+
+{
+  "cpf": 39835111133,
+  "name": "Teste 3",
+  "email": "teste3@json.com"
+}
+
+###
+PATCH http://localhost:3000/cliente/update/2
+Content-Type: application/json
+
+{
+  "cpf": 39835111122,
+  "name": "Teste 2 update",
+  "email": "teste2.update@json.com"
+}
+
+#################################################
+
+###
+DELETE http://localhost:3000/produto/delete/5
+
+###
+GET http://localhost:3000/produto
+
+###
+GET http://localhost:3000/produto/find/2
+
+###
+GET http://localhost:3000/produto/categoria/lanche
+
+###
+POST http://localhost:3000/produto
+Content-Type: application/json
+
+{
+  "nome": "X-salada",
+  "categoria": "lanche",
+  "estoque": 12
+}
+
+###
+PATCH http://localhost:3000/produto/update/4
+Content-Type: application/json
+
+{
+  "nome": "X-salada",
+  "categoria": "lanche",
+  "estoque": 4
+}
+
+#################################################
+
+###
+GET http://localhost:3000/pedido
+
+###
+GET http://localhost:3000/pedido/1
+
+###
+POST http://localhost:3000/pedido
+Content-Type: application/json
+
+{
+  "numero_do_pedido": 1,
+  "status": "aberto",
+  "cliente": 1,
+  "produtos": null
+}
