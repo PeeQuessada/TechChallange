@@ -1,13 +1,21 @@
-export class Cliente {
+export class Pedido {
   id: number;
-  cpf: number;
-  name: string;
-  email: string;
+  status: string;
+  orderNumber: number;
+  cliente: number;
+  produtos: string;
 
-  constructor(cpf: number, name: string, email: string, id?: number) {
-    this.cpf = cpf;
-    this.name = name;
-    this.email = email;
+  constructor(
+    status: string,
+    orderNumber: number,
+    cliente: number,
+    produtos: string,
+    id?: number,
+  ) {
+    this.cliente = cliente;
+    this.status = status;
+    this.orderNumber = orderNumber;
+    this.produtos = produtos;
     this.id = id;
   }
 }

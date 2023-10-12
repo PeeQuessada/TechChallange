@@ -25,7 +25,7 @@ export class ClienteController {
     return this.clienteService.findAll();
   }
 
-  @Get('find/:id')
+  @Get('findById/:id')
   findOne(@Param('id') id: number) {
     console.log('id => ', id);
     return this.clienteService.findOne(+id);

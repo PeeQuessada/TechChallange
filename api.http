@@ -5,7 +5,7 @@ DELETE http://localhost:3000/cliente/delete/5
 GET http://localhost:3000/cliente
 
 ###
-GET http://localhost:3000/cliente/find/1
+GET http://localhost:3000/cliente/findById/1
 
 ###
 GET http://localhost:3000/cliente/cpf/39835111132
@@ -15,9 +15,9 @@ POST http://localhost:3000/cliente
 Content-Type: application/json
 
 {
-  "cpf": 39835111133,
-  "name": "Teste 3",
-  "email": "teste3@json.com"
+  "cpf": 39835111111,
+  "name": "Teste 1",
+  "email": "teste1@json.com"
 }
 
 ###
@@ -49,9 +49,9 @@ POST http://localhost:3000/produto
 Content-Type: application/json
 
 {
-  "nome": "X-salada",
+  "nome": "X-burger",
   "categoria": "lanche",
-  "estoque": 12
+  "estoque": 10
 }
 
 ###
@@ -77,8 +77,8 @@ POST http://localhost:3000/pedido
 Content-Type: application/json
 
 {
-  "numero_do_pedido": 1,
-  "status": "aberto",
+  "status": "iniciado",
+  "orderNumber": 2,
   "cliente": 1,
-  "produtos": null
+  "produtos": [{"produto": 1, "quantidade": 2}, {"produto": 2, "quantidade": 3}]
 }
